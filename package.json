@@ -1,0 +1,25 @@
+{
+  "name": "heroku-playwright-example",
+  "version": "1.0.0",
+  "description": "Example how you can use Playwright on Heroku",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jseta97/subnet-calc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mxschmitt/heroku-playwright-example/issues"
+  },
+  "homepage": "https://github.com/mxschmitt/heroku-playwright-example#readme",
+  "dependencies": {
+    "bufferutil": "^4.0.2",
+    "express": "^4.17.1",
+    "utf-8-validate": "^5.0.3",
+    "ws": "^7.4.1"
+  }
+}
