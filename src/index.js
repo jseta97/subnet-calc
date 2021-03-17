@@ -71,26 +71,3 @@ process.on('SIGINT', function() {
 const server = app.listen(port, () => {
   console.log(`Listening on port ${port}!`);
 });
-const wss = new Server({ server });
-
-
-async function closeBrowser() {
-  await browser.close();
-}
-wss.on('connection', (ws) => {
-  console.log('Client connected');
-  ws.on('close', () =>{
-   console.log('Client disconnected')
-  });
-  ws.on('message', function incoming(message) {
-    console.log("heartbeat");
-  });
-
-});
-
-setInterval(() => {
-  wss.clients.forEach((client) => {
-    client.send("ping");
-  });
-}, 30000);
-
